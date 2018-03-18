@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>45</y>
+      <w>270</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>Menu
+--
++Menu(SDL_Renderer*, SDL_Surface*, 
+SDL_Window*, SDL_Texture*,SDL_Texture*, 
+LTexture*,LTexture*,LTexture*,SDL_Texture*,
+SDL_Texture*,SDL_Texture*,SDL_Texture*,
+SDL_Texture*,SDL_Texture*SDL_Texture*)
++display(SDL_Renderer*): int
++close(SDL_Window*): int
++~Menu()
+--
+-input: int
+-gWindow: SDL_Window*
+
+ //images using pointers of LTexture and 
+ SDL_Texture
+
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>432</y>
+      <w>288</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Selection_menu
+--
++Selection_menu( SDL_Window*,LTexture*,
+LTexture*,SDL_Texture*,SDL_Texture*)
+
++~Selection_menu()
++showfigs(): int
++showCharacter() void
+--
+-characterNumber: int
+-gWindow: SDL_Window*
+
+ //set of images using pointers of LTexture 
+ and SDL_Texture
+
+--
+this will be the screen the
+user sees when they want to 
+select a player 
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1278</x>
+      <y>126</y>
+      <w>189</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>Game
+--
++Game()
++~Game()
++Init() void
++Handle_Events() void
++Update() void
++init (vector &lt;string&gt; load): void
++save(): void
++Render() void
++Clean() void
++Resume()
++running(): bool
+
+--
+-Object_List: List
+-menu: Menu*
+-IsRunning: bool
+-gRenderer: SDL_Renderer
+-Background: image
+-user_selection: int
+-map: image
+--
+This is the dirver class and will
+contain all the objects  and the 
+menu
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>126</y>
+      <w>198</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>GameObject
+--
++GameObject(const char* textureSheet, int x, int y, int R, int G, int B)
++virtual ~GameObject()
++virtual Update(int)=0 void
++virtual Render() void
++getX(): int
++getY(): int 
++setX() : int
++setY() : int
++getD() : SDL_Rect
+--
+#PosX: int 
+#PosY: int 
+#Texture: SDL_Texture
+#sreRect: SDL_Rect
+#destRect: SDL_Rect
+#objTexture: SDL_Texture
+#flip: SDL_RendererFlip
+--
+ this class will have the attribtes 
+ and functons needed by all the 
+ game objects, like the coordinates
+group=3
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1593</x>
+      <y>549</y>
+      <w>189</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>Character
+--
+#gAttack : Mix_Chunk*
+#gKiBlast : Mix_Chunk*
+#gDamage : Mix_Chunk*
+--
++Character(const char* textureSheet, int x, int y, int R, int G, int B)
++~virtual Character()
++virtual KiBlast()=0 void
++virtual update(int)=0 void
++setHealth(int) : void
++setMana(int) : void
++getHealth() : int
++getMana() : int
++powerUp() : void
++virtual InstantTransmission()=0 : void
++virtual Regenerate()=0 : void
+--
+#mana: int
+--
+the class from which all the 
+user sprites will inherit.
+this calss will have all the 
+funcions which are common to 
+the player object, regardless of 
+the actual character
+group=4
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1395</x>
+      <y>918</y>
+      <w>189</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>Goku
+--
++Goku(const char* textureSheet, int x, int y, int R, int G, int B)
++~Goku()
++KiBlast() void
++Transform() void
++update(int): void
++InstantTransmission() : void
++Regenerate(): void
+--
+-sprites 
+--
+this class will have all the
+goku sprites
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1593</x>
+      <y>918</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Picolo
+--
++Picolo(const char* textureSheet, int x, int y, int R, int G, int B)
++~Picolo()
+-sprites
++update(int): void
++InstantTransmission() : void
++Regenerate(): void
+--
+this class will haave all the 
+Picolo sprites
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1836</x>
+      <y>918</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Vegeta
+--
++Vegeta(const char* textureSheet, int x, int y, int R, int G, int B)
++~Vegeta()
+-sprites
++Transform(): void
++update(int): void
++InstantTransmission() : void
++Regenerate(): void
+--
+this class will have all the 
+vegeta sprites
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1476</x>
+      <y>648</y>
+      <w>135</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1773</x>
+      <y>648</y>
+      <w>171</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1674</x>
+      <y>882</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1053</x>
+      <y>639</y>
+      <w>189</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Sibamen
+--
+-bool dead
+-bool convert
+-int attackFrame
+-int deathFrame
+--
++Sibamen(const char* textureSheet, int x, int y, int R, int G, int B)
++~Sibamen()
++KiBlast(int): void
++death(int): void
++track(GameObject*) : void
+--
+this class will have all the
+saibamen sprites
+
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>837</x>
+      <y>639</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>CellJunior
+--
+-bool dead
+-bool convert
+-int attackFrame
+-int deathFrame
+--
++CellJunior(const char* textureSheet, int x, int y, int R, int G, int B)
++~CellJunior()
+-Sprites
++KiBlast(int): void
++death(int): void
++track(GameObject*) : void
+--
+this class will have all the 
+cell junior sprites
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1071</x>
+      <y>378</y>
+      <w>198</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>Enemy
+--
+#gAttack : Mix_Chunk*
+#gDamage : Mix_Chunk*
+--
++Enemy(const char* textureSheet, int x, int y, int R, int G, int B)
++~Enemy
++Track() void 
++virtual Move() void 
++update(int)=0 void
++virtual KiBlast()=0: void
++virtual death()=0: void
+--
+this is the class from which all 
+the enemies will inherit. It will 
+have functions to track the player 
+and to move the enemy sprtie
+towards the player 
+group=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1152</x>
+      <y>558</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>468</y>
+      <w>162</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>261</y>
+      <w>342</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>360.0;10.0;300.0;10.0;300.0;200.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1683</x>
+      <y>378</y>
+      <w>27</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>693</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Dragon_ball
+--
++Dragon_ball(const char* textureSheet, int x, int y, int R, int G, int B)
++~Dragon_ball()
+-visible: bool
++update(): void
++track(GameObject*) : void
+--
+-gCollect : Mix_Chunk*
+--
+this is the class that will have
+dragon balls, these are objects
+that the player woll have to 
+collect. 
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1593</x>
+      <y>522</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+
+group=4
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>99</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+
+group=3
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1071</x>
+      <y>351</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+
+group=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1089</x>
+      <y>153</y>
+      <w>207</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>810</y>
+      <w>333</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>ShowCharacter
+--
++ShowCharacter(Ltexture*, float, float)
++~ShowCharacter()
++RenderTransition(long int&amp;, SDL_renderer, int): void
++Render(long int&amp;, SDL_renderer, int): void
+--
+-characterNumber: int
+-x,x1,x2,x3: fLoat
+-y,y1,y2,y3: float
+-width ,width1,width2,width3: int 
+-height,height1,height2,height3: int 
+-spriteClips1: SDL_Rect[]
+-spriteClips2: SDL_Rect[]
+-spriteClips3: SDL_Rect[]
+-spriteTransition: SDL_Rect[]
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>738</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>90</y>
+      <w>261</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1809</x>
+      <y>108</y>
+      <w>279</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>TextureManager
+--
++LoadTexture(char*,int,int,int): SDL_Texture*
++LoadTexture(char*): SDL_Texture*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1773</x>
+      <y>126</y>
+      <w>54</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1179</x>
+      <y>243</y>
+      <w>117</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>396</y>
+      <w>225</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;200.0;230.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>423</y>
+      <w>351</w>
+      <h>513</h>
+    </coordinates>
+    <panel_attributes>Words
+--
++Words()
++~Words()
++Word(LTexture*)
++getAlphabet(): void
++RenderAlphabets(SDL_Renderer*): void
++RenderWord_GOKU(SDL_Renderer*): void
++RenderWord_VEGETA(SDL_Renderer*): void
++RenderWord_PICOLO(SDL_Renderer*): void
++RenderWord_Play(SDL_Renderer*): void
++RenderWord_Load(SDL_Renderer*): void
++RenderWord_Controls(SDL_Renderer*): void
++RenderWord_Exit(SDL_Renderer*): void
++RenderWord_AllOptions(SDL_Renderer*): void
++RenderWord_ChooseYourCharacter(SDL_Renderer*): void
++RenderWord_ESC(SDL_Renderer*): void
++RenderWord_Health(SDL_Renderer*): void
++RenderWord_Mana(SDL_Renderer*): void
++RenderWord_Yes(SDL_Renderer*): void
++RenderWord_No(SDL_Renderer*): void
++RenderWord_Quit(SDL_Renderer*): void
++RenderWord_GameOver(SDL_Renderer*): void
++RenderWord_YouWin(SDL_Renderer*): void
+--
+-width: int
+-height: int
+-x1: int 
+-y1: int
+-intitX: int
+-initY: int
+-spriteClip: SDL_Rect
+-LTexture* spriteSheetTexture
+-Alphabets: SDL_Rect[26]
+-fillREct: SDL_Rect
+
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>27</y>
+      <w>441</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Main_Menu
+--
++Main_Menu(SDL_Renderer*, SDL_Surface*, SDL_Window*,
+SDL_Texture*,SDL_Texture,LTexture*,SDL_Texture*,
+SDL_Texture*,LTexture*,LTexture*)
+
++displayMenu(SDL_Renderer*) void
++controls(SDL_Renderer*) void 
++showTransition(SDL_Renderer*) void 
++showCredits(SDL_Renderer*) void 
++moveArrow_up(int* arrow_y) void
++moveArrow_down(int* arrow_y) void
++setArrow_up(int* arrow_y) void
++setArrow_down(int* arrow_y) void 
++quitWindow(bool, SDL_Renderer*)
+--
+-arrow_x: int 
+-arrow_y: int
+-arrowCount: int
+-input: int   
+-showIntroTransition: bool
+-gWindow: SDL_Window*
+-e: SDL_event
+
+ //images using pointers of LTexture and SDL_Texture
+--
+ 
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1215</x>
+      <y>558</y>
+      <w>90</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;80.0;70.0;80.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1827</x>
+      <y>405</y>
+      <w>243</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ObjectFactory
+--
+-vector &lt;Enemy*&gt; enemeies
+-vector &lt;Enemy*&gt; erased
+--
++ObjectFactory()
++ObjectFactory(vector &lt;string&gt; load)
++~ObjectFactory()
++updateAll(int) void
++trackAll() : void
++setBalls(int, int) : void
++isTouching(Enemy*, Enemy*): bool
++isTouching(GameObject*) : bool
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1773</x>
+      <y>576</y>
+      <w>153</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;30.0;150.0;30.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1179</x>
+      <y>36</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Health
+--
+-vector &lt;SDL_Rect*&gt; bar;
+--
++Health();
++void render(int health, int mana, SDL_Renderer* renderer);
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1359</x>
+      <y>36</y>
+      <w>81</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;70.0;20.0;70.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1863</x>
+      <y>216</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Projectile
+--
++Projectile(const char* textureSheet, int x, int y, int R, int G, int B);
++virtual ~Projectile();
++void update(int flag, double angle = 0.0);
+bg=black
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1773</x>
+      <y>252</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>576</y>
+      <w>216</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1458</x>
+      <y>0</y>
+      <w>486</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Thanks to Dragon Ball.
+Special thanks to Spriters Resources. 
+https://www.spriters-resource.com/3ds/dragonballzextremebutoden/
+for sprites and sounds
+Youtube for the background music.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>477</y>
+      <w>585</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>630.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1458</x>
+      <y>162</y>
+      <w>504</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;40.0;50.0;40.0;50.0;290.0;390.0;290.0;390.0;40.0;540.0;40.0;540.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>855</y>
+      <w>342</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>LTexture
+--
++LTexture()
++~LTexture()
++SetAlpha( Uint8 alpha ):void
++LoadFromFile(string, SDL_Renderer*): bool
++Render( int ,int ,int , SDL_Rect*, double,
+SDL_Point*, SDL_RendererFlip, SDL_Renderer*): void
++Render(int ,int , SDL_Rect*, double,
+SDL_Point*, SDL_RendererFlip, SDL_Renderer*, int): void
+
++LoadTexture(char*): SDL_Texture*
+--
+-texture: SDL_Texture*
+-width: int
+-height: int
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2772</x>
+      <y>108</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>243</y>
+      <w>495</w>
+      <h>891</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>450.0;10.0;530.0;10.0;530.0;710.0;310.0;710.0;310.0;970.0;10.0;970.0;10.0;930.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>153</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>279</y>
+      <w>171</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;80.0;70.0;80.0;70.0;280.0;10.0;280.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,346 @@
+# depslib dependency file v1.0
+1512127271 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\main.cpp
+	"Game.h"
+	<time.h>
+	<SDL.h>
+	<stdio.h>
+	<fstream>
+	<iostream>
+	<string>
+	<cstdlib>
+
+1512041015 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\game.h
+	"SDL.h"
+	"SDL_image.h"
+	"LTexture.h"
+	<vector>
+	<iostream>
+
+1511951359 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\ltexture.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+
+1512127167 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\celljr.cpp
+	"CellJr.h"
+	<SDL_mixer.h>
+
+1512026460 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\celljr.h
+	"Enemy.h"
+
+1512026115 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\enemy.h
+	"GameObject.h"
+	<SDL_mixer.h>
+
+1512029564 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\gameobject.h
+	"Game.h"
+
+1512127167 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\character.cpp
+	"Character.h"
+	<SDL_mixer.h>
+
+1512022351 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\character.h
+	"GameObject.h"
+	<SDL_mixer.h>
+
+1512026540 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\dragonball.cpp
+	"DragonBall.h"
+
+1512026567 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\dragonball.h
+	"Enemy.h"
+
+1512127167 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\enemy.cpp
+	"Enemy.h"
+	<SDL_mixer.h>
+
+1512126987 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\game.cpp
+	"Game.h"
+	"TextureManager.h"
+	"Menu.h"
+	<stdio.h>
+	"SDL_mixer.h"
+	"Game.h"
+	"Words.h"
+	"TextureManager.h"
+	"GameObject.h"
+	"Enemy.h"
+	"Saibaman.h"
+	"Goku.h"
+	"Vegeta.h"
+	"Picolo.h"
+	"Health.h"
+	"Projectile.h"
+	"ObjectFactory.h"
+	<fstream>
+	<Windows.h>
+	<time.h>
+
+1511970703 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\texturemanager.h
+	<SDL.h>
+
+1511955136 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\menu.h
+	"Main_menu.h"
+
+1511953841 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\main_menu.h
+	<SDL.h>
+	<stdio.h>
+	<string>
+	<iostream>
+	"LTexture.h"
+
+1512123070 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\words.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+	"LTexture.h"
+	"Point.h"
+
+1511954041 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\point.h
+
+1512027781 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\saibaman.h
+	"Enemy.h"
+
+1512029156 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\goku.h
+	<Character.h>
+
+1512035689 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\vegeta.h
+	<Character.h>
+
+1512029389 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\picolo.h
+	<Character.h>
+
+1511963446 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\health.h
+	<vector>
+	<SDL.h>
+
+1512029090 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\projectile.h
+	<GameObject.h>
+
+1512038841 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\objectfactory.h
+	<vector>
+	"Saibaman.h"
+	"CellJr.h"
+	"DragonBall.h"
+
+1511957365 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\gameobject.cpp
+	"GameObject.h"
+	"TextureManager.h"
+
+1512127076 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\goku.cpp
+	"Goku.h"
+	"GameObject.h"
+	"Projectile.h"
+	<iostream>
+
+1512108034 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\health.cpp
+	"Health.h"
+
+1511951441 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\ltexture.cpp
+	"LTexture.h"
+
+1512055424 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\main_menu.cpp
+	"Main_menu.h"
+	"Words.h"
+	"LTexture.h"
+	<Windows.h>
+	"MMSystem.h"
+
+1511956455 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\menu.cpp
+	"Menu.h"
+	"Selection_menu.h"
+
+1511956527 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\selection_menu.h
+	<SDL.h>
+	"LTexture.h"
+	"Words.h"
+	<time.h>
+	<windows.h>
+
+1512126758 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\objectfactory.cpp
+	"ObjectFactory.h"
+	<sstream>
+	<cstdlib>
+	<string>
+	"Enemy.h"
+
+1512046774 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\picolo.cpp
+	"Picolo.h"
+	"GameObject.h"
+
+1512029090 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\projectile.cpp
+	"Projectile.h"
+
+1512127150 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\saibaman.cpp
+	"Saibaman.h"
+	<SDL_mixer.h>
+
+1511956615 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\selection_menu.cpp
+	<SDL.h>
+	"Selection_menu.h"
+	"ShowCharacter.h"
+
+1511953900 c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\include\showcharacter.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+	"LTexture.h"
+
+1511956723 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\showcharacter.cpp
+	"ShowCharacter.h"
+
+1511970683 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\texturemanager.cpp
+	"TextureManager.h"
+	"Game.h"
+	<SDL.h>
+	<SDL_image.h>
+
+1512046827 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\vegeta.cpp
+	"Vegeta.h"
+	"GameObject.h"
+
+1512123492 source:c:\users\ahsan ahmed\desktop\oop lab 1\dbz - final project\project\dbz_final\src\words.cpp
+	"Words.h"
+	<iostream>
+
+1512127271 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\main.cpp
+	"Game.h"
+	<time.h>
+	<SDL.h>
+	<stdio.h>
+	<fstream>
+	<iostream>
+	<string>
+	<cstdlib>
+
+1512127167 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\celljr.cpp
+	"CellJr.h"
+	<SDL_mixer.h>
+
+1512127167 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\character.cpp
+	"Character.h"
+	<SDL_mixer.h>
+
+1512026540 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\dragonball.cpp
+	"DragonBall.h"
+
+1512127167 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\enemy.cpp
+	"Enemy.h"
+	<SDL_mixer.h>
+
+1512127526 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\game.cpp
+	"Game.h"
+	"TextureManager.h"
+	"Menu.h"
+	<stdio.h>
+	"SDL_mixer.h"
+	"Game.h"
+	"Words.h"
+	"TextureManager.h"
+	"GameObject.h"
+	"Enemy.h"
+	"Saibaman.h"
+	"Goku.h"
+	"Vegeta.h"
+	"Picolo.h"
+	"Health.h"
+	"Projectile.h"
+	"ObjectFactory.h"
+	<fstream>
+	<Windows.h>
+	<time.h>
+
+1511957365 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\gameobject.cpp
+	"GameObject.h"
+	"TextureManager.h"
+
+1512127076 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\goku.cpp
+	"Goku.h"
+	"GameObject.h"
+	"Projectile.h"
+	<iostream>
+
+1512108034 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\health.cpp
+	"Health.h"
+
+1511951441 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\ltexture.cpp
+	"LTexture.h"
+
+1512055424 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\main_menu.cpp
+	"Main_menu.h"
+	"Words.h"
+	"LTexture.h"
+	<Windows.h>
+	"MMSystem.h"
+
+1511956455 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\menu.cpp
+	"Menu.h"
+	"Selection_menu.h"
+
+1512126758 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\objectfactory.cpp
+	"ObjectFactory.h"
+	<sstream>
+	<cstdlib>
+	<string>
+	"Enemy.h"
+
+1512046774 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\picolo.cpp
+	"Picolo.h"
+	"GameObject.h"
+
+1512029090 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\projectile.cpp
+	"Projectile.h"
+
+1512127150 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\saibaman.cpp
+	"Saibaman.h"
+	<SDL_mixer.h>
+
+1511956615 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\selection_menu.cpp
+	<SDL.h>
+	"Selection_menu.h"
+	"ShowCharacter.h"
+
+1511956723 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\showcharacter.cpp
+	"ShowCharacter.h"
+
+1511970683 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\texturemanager.cpp
+	"TextureManager.h"
+	"Game.h"
+	<SDL.h>
+	<SDL_image.h>
+
+1512046827 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\vegeta.cpp
+	"Vegeta.h"
+	"GameObject.h"
+
+1512123492 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\words.cpp
+	"Words.h"
+	<iostream>
+
+1511954033 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\project3\dbz_final\src\point.cpp
+
+1512134869 source:c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\final\main.cpp
+	"Include\Game.h"
+	<time.h>
+	<SDL.h>
+	<stdio.h>
+	<fstream>
+	<iostream>
+	<string>
+	<cstdlib>
+
+1512135265 c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\final\include\game.h
+	"SDL.h"
+	"SDL_image.h"
+	"LTexture.h"
+	<vector>
+	<iostream>
+
+1512135436 c:\users\sami murtaza\onedrive - habib university\pc_archive\3)fall 2017\oop\project\final\include\ltexture.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+
